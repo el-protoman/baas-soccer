@@ -1,0 +1,43 @@
+{
+  "name": "VirtualAccount",
+  "type": "object",
+  "properties": {
+    "fintech_client_id": {
+      "type": "string"
+    },
+    "account_holder_name": {
+      "type": "string"
+    },
+    "account_number": {
+      "type": "string"
+    },
+    "routing_number": {
+      "type": "string"
+    },
+    "account_type": {
+      "type": "string",
+      "enum": [
+        "Checking",
+        "Savings"
+      ],
+      "default": "Checking"
+    },
+    "balance": {
+      "type": "number",
+      "default": 0
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Frozen"
+      ],
+      "default": "Active"
+    }
+  },
+  "required": [
+    "fintech_client_id",
+    "account_holder_name",
+    "account_number"
+  ]
+}
