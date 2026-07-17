@@ -1,0 +1,28 @@
+{
+  "name": "FintechClient",
+  "type": "object",
+  "properties": {
+    "company_name": {
+      "type": "string"
+    },
+    "developer_email": {
+      "type": "string"
+    },
+    "mock_api_key": {
+      "type": "string"
+    },
+    "sandbox_status": {
+      "type": "string",
+      "enum": [
+        "Active",
+        "Suspended",
+        "Pending"
+      ],
+      "default": "Active"
+    }
+  },
+  "required": [
+    "company_name",
+    "developer_email"
+  ]
+}
