@@ -1,0 +1,40 @@
+{
+  "name": "TransactionLedger",
+  "type": "object",
+  "properties": {
+    "virtual_account_id": {
+      "type": "string"
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "Credit",
+        "Debit"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "ACH",
+        "Wire",
+        "Card"
+      ]
+    },
+    "amount": {
+      "type": "number"
+    },
+    "description": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "virtual_account_id",
+    "direction",
+    "type",
+    "amount"
+  ]
+}
